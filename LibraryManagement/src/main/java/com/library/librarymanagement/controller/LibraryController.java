@@ -18,9 +18,9 @@ public class LibraryController {
 	@Autowired
 	private LibraryService libraryService;
 
-	@GetMapping("/books")
-	public List<Book> getBooks(){
-		return libraryService.getBooks();
+	@GetMapping
+	public String getBooks(){
+		return "welcome in Capgemni";
 		
 	}
 
