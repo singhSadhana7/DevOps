@@ -20,7 +20,7 @@ public class LibraryController {
 
 	@GetMapping
 	public String getBooks(){
-		return "welcome in Capgemni";
+		return "AWS code build is runing successfully";
 		
 	}
 
