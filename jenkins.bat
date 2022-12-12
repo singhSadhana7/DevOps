@@ -19,7 +19,7 @@ pipeline{
         stage("build"){
             steps{
             
-                bat "mvn clean install"
+                bat "LibraryManagement mvn clean install"
             
             }
             
