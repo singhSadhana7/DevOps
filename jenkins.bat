@@ -2,7 +2,6 @@
 pipeline{
     agent any
     environment{
-      //  def pom = readMavenPom file:'LibraryManagement/pom.xml'
         JAVA_HOME = "C:/java/jdk-11.0.1"
         MAVEN_HOME ="C:/Users/sadha/Downloads/apache-maven-3.8.6"
     }
@@ -27,14 +26,6 @@ pipeline{
 
         }
         
-        stage("sonar analysis"){
-            steps{
-            
-               withSonarQubeEnv("sonarReport"){
-                bat "mvn sonar:sonar"
-               }
-            }
-        }
     }
     
 }
