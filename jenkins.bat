@@ -1,6 +1,7 @@
 pipeline{
     agent any
     environment{
+        def pom = readMavenPom file:'LibraryManagement/pom.xml'
         JAVA_HOME = "C:/java/jdk-11.0.1"
         MAVEN_HOME ="C:/Users/sadha/Downloads/apache-maven-3.8.6"
     }
@@ -19,7 +20,7 @@ pipeline{
         stage("build"){
             steps{
             
-                bat "LibraryManagement mvn clean install"
+                bat "mvn clean install"
             
             }
             
