@@ -19,8 +19,8 @@ pipeline{
        
         stage("build"){
             steps{
-            
-                bat "/LibraryManagement mvn clean install"
+                cd "LibraryManagement"
+                bat "mvn clean install"
             
             }
             
@@ -31,8 +31,8 @@ pipeline{
             steps{
             
                withSonarQubeEnv("sonarReport"){
-                   
-                bat "/LibraryManagement mvn sonar:sonar"
+                cd "LibraryManagement"   
+                bat "mvn sonar:sonar"
                }
             }
         }
