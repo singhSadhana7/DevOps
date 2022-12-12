@@ -5,7 +5,16 @@ pipeline{
         MAVEN_HOME ="C:/Users/sadha/Downloads/apache-maven-3.8.6"
     }
     stages{
-        
+     
+        stage("initialize"){
+            steps{
+            
+                git branch: 'main', url: 'https://github.com/singhSadhana7/DevOps.git'
+            
+            }
+            
+
+        }
        
         stage("build"){
             steps{
